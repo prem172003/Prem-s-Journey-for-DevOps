@@ -1,0 +1,82 @@
+top - 14:25:04 up 8 min,  1 user,  load average: 0.00, 0.00, 0.00
+Tasks: 113 total,   1 running, 112 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :    908.7 total,    392.4 free,    301.9 used,    322.7 buff/cache
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.    606.8 avail Mem
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    145 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-kmpath_handlerd
+    155 root      20   0       0      0      0 I   0.0   0.0   0:00.09 kworker/0:3-events
+    156 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker/1:3-cgroup_release
+    175 root      20   0       0      0      0 I   0.0   0.0   0:00.03 kworker/u8:3-events_unbound
+    179 root     -11   0  279208   9364   7292 S   0.0   1.0   0:00.06 multipathd
+    183 systemd+  20   0   22400  14072  11404 S   0.0   1.5   0:00.11 systemd-resolve
+    186 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:1H-kblockd
+    196 root      20   0   39036  13720   8904 S   0.0   1.5   0:00.35 systemd-udevd
+    201 root      -2   0       0      0      0 S   0.0   0.0   0:00.00 psimon
+    254 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-ena
+    263 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-nfit
+    270 root      20   0       0      0      0 I   0.0   0.0   0:00.04 kworker/u8:4-ipv6_addrconf
+    289 root      20   0       0      0      0 S   0.0   0.0   0:00.00 jbd2/nvme0n1p13-8
+    290 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-ext4-rsv-conversion
+    518 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-cfg80211
+    536 systemd+  20   0   24644  12360  10776 S   0.0   1.3   0:00.08 systemd-network
+    578 root      20   0    2824   2024   1880 S   0.0   0.2   0:00.00 acpid
+    580 root      20   0    2908   2016   1892 S   0.0   0.2   0:00.04 chronyd-starter
+    582 root      20   0    7488   2964   2712 S   0.0   0.3   0:00.00 cron
+    583 message+  20   0    8760   5208   4304 S   0.0   0.6   0:00.06 dbus-daemon
+    593 root      20   0   80796   4032   3736 S   0.0   0.4   0:00.07 irqbalance
+    597 root      20   0   46816  29860  14712 S   0.0   3.2   0:00.20 networkd-dispat
+    599 polkitd   20   0  381776   9964   7416 S   0.0   1.1   0:00.13 polkitd
+    601 root      20   0 1759024  20768  11984 S   0.0   2.2   0:00.73 amazon-ssm-agen
+    603 root      20   0 1885420  38544  25428 S   0.0   4.1   0:00.33 snapd
+    607 root      20   0   18176   9068   7804 S   0.0   1.0   0:00.07 systemd-logind
+    610 root      20   0  543264  14868  12512 S   0.0   1.6   0:00.10 udisksd
+    645 root      20   0   10716   7604   6428 S   0.0   0.8   0:00.01 sshd
+    661 root      20   0    8280   2644   2444 S   0.0   0.3   0:00.01 agetty
+    675 root      20   0    8236   2556   2372 S   0.0   0.3   0:00.00 agetty
+    701 _chrony   20   0   20264   6172   5388 S   0.0   0.7   0:00.02 chronyd
+    702 _chrony   20   0   11936   2404   1760 S   0.0   0.3   0:00.00 chronyd
+    708 root      20   0  126216  32212  17592 S   0.0   3.5   0:00.17 unattended-upgr
+    740 syslog    20   0  220304   5644   4048 S   0.0   0.6   0:00.06 rsyslogd
+top - 14:25:04 up 8 min,  1 user,  load average: 0.00, 0.00, 0.00
+Tasks: 113 total,   1 running, 112 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :    908.7 total,    392.4 free,    301.9 used,    322.7 buff/cache
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.    606.8 avail Mem
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    145 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-kmpath_handlerd
+    155 root      20   0       0      0      0 I   0.0   0.0   0:00.09 kworker/0:3-events
+    156 root      20   0       0      0      0 I   0.0   0.0   0:00.00 kworker/1:3-cgroup_release
+    175 root      20   0       0      0      0 I   0.0   0.0   0:00.03 kworker/u8:3-events_unbound
+    179 root     -11   0  279208   9364   7292 S   0.0   1.0   0:00.06 multipathd
+    183 systemd+  20   0   22400  14072  11404 S   0.0   1.5   0:00.11 systemd-resolve
+    186 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:1H-kblockd
+    196 root      20   0   39036  13720   8904 S   0.0   1.5   0:00.35 systemd-udevd
+    201 root      -2   0       0      0      0 S   0.0   0.0   0:00.00 psimon
+    254 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-ena
+    263 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-nfit
+    270 root      20   0       0      0      0 I   0.0   0.0   0:00.04 kworker/u8:4-ipv6_addrconf
+    289 root      20   0       0      0      0 S   0.0   0.0   0:00.00 jbd2/nvme0n1p13-8
+    290 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-ext4-rsv-conversion
+    518 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-cfg80211
+    536 systemd+  20   0   24644  12360  10776 S   0.0   1.3   0:00.08 systemd-network
+    578 root      20   0    2824   2024   1880 S   0.0   0.2   0:00.00 acpid
+    580 root      20   0    2908   2016   1892 S   0.0   0.2   0:00.04 chronyd-starter
+    582 root      20   0    7488   2964   2712 S   0.0   0.3   0:00.00 cron
+    583 message+  20   0    8760   5208   4304 S   0.0   0.6   0:00.06 dbus-daemon
+    593 root      20   0   80796   4032   3736 S   0.0   0.4   0:00.07 irqbalance
+    597 root      20   0   46816  29860  14712 S   0.0   3.2   0:00.20 networkd-dispat
+    599 polkitd   20   0  381776   9964   7416 S   0.0   1.1   0:00.13 polkitd
+    601 root      20   0 1759024  20768  11984 S   0.0   2.2   0:00.73 amazon-ssm-agen
+    603 root      20   0 1885420  38544  25428 S   0.0   4.1   0:00.33 snapd
+    607 root      20   0   18176   9068   7804 S   0.0   1.0   0:00.07 systemd-logind
+    610 root      20   0  543264  14868  12512 S   0.0   1.6   0:00.10 udisksd
+    645 root      20   0   10716   7604   6428 S   0.0   0.8   0:00.01 sshd
+    661 root      20   0    8280   2644   2444 S   0.0   0.3   0:00.01 agetty
+    675 root      20   0    8236   2556   2372 S   0.0   0.3   0:00.00 agetty
+    701 _chrony   20   0   20264   6172   5388 S   0.0   0.7   0:00.02 chronyd
+    702 _chrony   20   0   11936   2404   1760 S   0.0   0.3   0:00.00 chronyd
+    708 root      20   0  126216  32212  17592 S   0.0   3.5   0:00.17 unattended-upgr
+    740 syslog    20   0  220304   5644   4048 S   0.0   0.6   0:00.06 rsyslogd
