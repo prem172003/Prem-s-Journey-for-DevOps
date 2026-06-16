@@ -52,7 +52,7 @@
 * history – Tracked your commands to review what you practiced.
 * clear – Cleaned up the screen buffer for a fresh workspace.
 
-File & Text Processing Commands
+# DAY - 2 File & Text Processing Commands ( 14/06/2026 )
 tee: Diverts text output to both the screen and a file (-a appends).
 
 cat: Displays the entire contents of a file.
@@ -94,3 +94,92 @@ echo: Prints strings of text to the terminal.
 tail: Displays the last few lines of a file or output stream (e.g., tail -3).
 
 vim: Command-line text editor used to create and modify files.
+
+# DAY - 3: Linux System Administration, Security, and File Management
+**Date:** June 16, 2026
+
+This documentation captures the experiments, commands, and security concepts explored during Day 3 of the DevOps journey.
+
+---
+
+## 1. File & Text Processing Reference
+
+### Essential Commands
+| Command | Purpose |
+| :--- | :--- |
+| `diff <f1> <f2>` | Compares two files line-by-line showing differences. |
+| `wc -l / -w / -c` | Counts lines, words, or characters in a file. |
+| `truncate -s <size>` | Resizes a file to a specific byte count. |
+| `split -l <n>` | Breaks a large file into smaller segments of `n` lines. |
+| `sed -i 's/old/new/g'` | Performs in-place global substitution. |
+| `sed '/pattern/d'` | Deletes all lines matching the pattern. |
+
+---
+
+## 2. Archive & Compression
+
+The following workflow was used to manage log files:
+
+1. **Compress:** `tar -cvzf audit.log_16062026.tar.gz audit.log.*`
+2. **Remove Originals:** `rm -f audit.log.*`
+3. **Decompress:** `gunzip audit.log_16062026.tar.gz`
+4. **Extract:** `tar -xvf audit.log_16062026.tar`
+
+---
+
+## 3. User, Group & Security Management
+
+### Experimental Scenarios
+
+#### Scenario A: Group Permission Overlap
+
+* **Goal:** Test if being in a shared group grants automatic write access.
+* **Observation:** Simply sharing a group does not grant write access if permissions are restricted (e.g., `740`). `sudo` privileges, however, allow bypassing these restrictions.
+* **Commands:**
+    ```bash
+    ls -l <file>             # Check current mode (e.g., -rwxr-----)
+    chmod 770 <file>         # Grant group write access
+    groups <username>        # Verify membership
+    ```
+
+#### Scenario B: Session Group Caching
+
+* **Goal:** Why aren't `usermod` changes immediate?
+* **Observation:** Linux caches group membership at the start of a session.
+* **Resolution:** Use `newgrp` to force a refresh.
+* **Commands:**
+    ```bash
+    sudo usermod -aG <group> <user>  # Update system database
+    groups                           # Shows stale info
+    newgrp <group>                   # Refreshes current session
+    ```
+
+#### Scenario C: Password Security (`pwquality`)
+
+* **Goal:** Enforce password strength policies.
+* **Setup:** `pwquality.conf` is not default; it requires an external package.
+* **Commands:**
+    ```bash
+    sudo apt install libpam-pwquality      # Install the module
+    sudo vim /etc/security/pwquality.conf  # Set minlen, dcredit, lcredit
+    grep "pam_pwquality.so" /etc/pam.d/common-password # Verify integration
+    ```
+
+---
+
+## 4. Advanced System Security
+
+* **`chage` (Password Aging):** Used to control password expiration (`-M`), warning days (`-W`), and account expiration (`-E`).
+    * *Example:* `sudo chage -E 2026-06-17 new_guy`
+* **`faillock`:** Manages failed login attempts to prevent brute-force attacks.
+    * *Resetting:* `sudo faillock --user <user> --reset`
+
+---
+
+## 5. Learning Path Checklist
+- [x] Master `sed` (substitution, deletion, line ranges)
+- [x] Practice `tar` & `gzip` workflows
+- [x] Understand `/etc/group` and `usermod` workflows
+- [x] Implement PAM password complexity
+- [ ] Explore Sticky Bit (`chmod +t`) for directory sharing (Scheduled for Day 4)
+
