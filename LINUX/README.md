@@ -183,3 +183,55 @@ The following workflow was used to manage log files:
 - [x] Implement PAM password complexity
 - [ ] Explore Sticky Bit (`chmod +t`) for directory sharing (Scheduled for Day 4)
 
+
+
+# System Administration Command Reference
+
+This document summarizes the essential Linux commands used for system monitoring, management, and configuration.
+
+## 1. System & Hardware Information
+* `df -h`               : Display disk space usage in human-readable format.
+* `free -h`             : Display memory usage in human-readable format.
+* `nproc`               : Print the number of available processing units.
+* `cat /proc/cpuinfo`   : Display detailed CPU hardware information.
+* `cat /proc/meminfo`   : Display detailed RAM/memory information.
+* `uname -a`            : Print system kernel version, architecture, and hostname.
+* `hostnamectl`         : View or set the system hostname.
+* `arch`                : Display the system machine architecture.
+* `mpstat`              : Report processor-related statistics.
+* `dmesg`               : Print or control the kernel ring buffer (logs).
+
+## 2. File & Directory Management
+* `du -sh .`            : Estimate file space usage for the current directory.
+* `ls -alF`             : List all directory contents, including hidden files.
+* `tar -xvf file.tar.xz`: Extract a compressed tar archive.
+* `rm [file]`           : Remove a file.
+* `pwd`                 : Print the current working directory path.
+
+## 3. Networking & Connectivity
+* `route -n`            : View the IP routing table.
+* `ip a`                : Display all network interfaces and IP addresses.
+* `ss -tulpn`           : Show socket statistics (listening ports/processes).
+* `ping 8.8.8.8`        : Test network connectivity to a destination.
+* `ufw status`          : Check the status of the firewall.
+
+## 4. Process & Job Control
+* `top`                 : Real-time dynamic view of running processes.
+* `jobs`                : List active background jobs in the shell.
+* `fg`                  : Move a background job to the foreground.
+* `bg`                  : Resume a stopped job in the background.
+* `docker ps`           : List currently running Docker containers.
+
+## 5. Environment & Shell Configuration
+* `export VAR=VAL`      : Set an environment variable for the current session.
+* `printenv`            : List all current environment variables.
+* `echo $VAR`           : Display the value of a specific variable.
+* `source ~/.bashrc`    : Apply changes from .bashrc to the current shell.
+* `script [file]`       : Record terminal session activity to a file.
+
+## 6. Service & Package Management
+* `sudo apt install [pkg]`: Install a software package.
+* `systemctl status [svc]`: Check the status of a system service.
+* `crontab -e`          : Edit scheduled cron jobs.
+* `sosreport`           : Generate a system diagnostic/configuration report.
+* `python3 -m http.server`: Start a local HTTP server in the current directory.
